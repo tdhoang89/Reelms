@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#07070b" />
+    <meta name="color-scheme" content="dark" />
+    <title>REELMS</title>
+    <style>
+      /* critical boot styles — visible before the bundle runs */
+      html, body { margin: 0; height: 100%; background: #07070b; overflow: hidden; }
+      #boot { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px;
+        background: radial-gradient(120% 90% at 50% 30%, #241a3a 0%, #0d0b16 55%, #050508 100%); color: #f6c945; z-index: 50; transition: opacity .5s ease; font-family: Georgia, serif; }
+      #boot .logo { font-size: clamp(40px, 11vw, 92px); letter-spacing: .14em; font-weight: 700;
+        background: linear-gradient(180deg, #fff6d0 0%, #f6c945 45%, #a8740a 100%); -webkit-background-clip: text; background-clip: text; color: transparent;
+        filter: drop-shadow(0 4px 18px rgba(246, 201, 69, .35)); }
+      #boot .bar { width: min(62vw, 320px); height: 6px; border-radius: 6px; background: rgba(255, 255, 255, .08); overflow: hidden; box-shadow: inset 0 0 0 1px rgba(246, 201, 69, .25); }
+      #boot .bar i { display: block; height: 100%; width: 4%; background: linear-gradient(90deg, #a8740a, #f6c945, #fff2b8); transition: width .25s ease; border-radius: 6px; }
+      #boot .tip { color: #b9b2c9; font: 14px/1.4 system-ui, sans-serif; max-width: 80vw; text-align: center; min-height: 1.4em; }
+      #boot.hide { opacity: 0; pointer-events: none; }
+    </style>
+    <script defer src="./assets/reelms.js"></script>
+    <link rel="stylesheet" href="./assets/style.css">
+  </head>
+  <body>
+    <div id="app">
+      <div id="stage"></div>
+      <div id="ui" aria-live="polite"></div>
+    </div>
+    <div id="boot" role="status" aria-label="Loading REELMS">
+      <div class="logo">REELMS</div>
+      <div class="bar"><i id="boot-bar"></i></div>
+      <div class="tip" id="boot-tip">Fifty machines. Two worlds. One House to beat.</div>
+    </div>
+  </body>
+</html>

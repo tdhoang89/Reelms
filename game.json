@@ -1,0 +1,22 @@
+{
+    "name":  "REELMS",
+    "package":  "com.henry.reelms",
+    "version":  "1.0",
+    "entry":  "index.html",
+    "orientation":  "auto",
+    "fullscreen":  true,
+    "cutout":  "extend",
+    "keep_screen_on":  true,
+    "back":  "ask",
+    "internet":  false,
+    "external_links":  "block",
+    "background":  "#07070b",
+    "icon":  "icon.png",
+    "icon_background":  "#2a1d48",
+    "banner":  "banner.png",
+    "category":  "game",
+    "tv":  false,
+    "min_webview":  100,
+    "locale":  "vi",
+    "debug":  false
+}
